@@ -7,4 +7,12 @@
 	<string name="asg1">Assignment 1</string>
 	<string name="asg2">Assignment 2</string>
 	<string name="asg3">Assignment 3</string>
+	<string name="t1">Test 1</string>
+	<string name="t2">Test 2</string>
+	<string name="t3">Test 3</string>
+	<string name="compute">Compute</string>
+	<string name="clear">Clear</string>
+	<string name="finalrep">Final Scores Report</string>
+	<string name="exit">Exit</string>
+	<string name="summ">Summary Report</string>
 </resources>

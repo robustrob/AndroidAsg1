@@ -24,18 +24,35 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int EditText01=0x7f080005;
-        public static final int EditText02=0x7f080008;
-        public static final int EditText03=0x7f08000b;
         public static final int TableRow01=0x7f080003;
         public static final int TableRow02=0x7f080006;
         public static final int TableRow03=0x7f080009;
+        public static final int TableRow04=0x7f08000c;
+        public static final int TableRow05=0x7f080012;
+        public static final int TableRow06=0x7f08000f;
+        public static final int TableRow07=0x7f080015;
+        public static final int TableRow08=0x7f080018;
         public static final int TextView01=0x7f080004;
         public static final int TextView02=0x7f080007;
         public static final int TextView03=0x7f08000a;
-        public static final int action_settings=0x7f08000c;
-        public static final int editText1=0x7f080002;
+        public static final int TextView04=0x7f08000d;
+        public static final int TextView05=0x7f080013;
+        public static final int TextView06=0x7f080010;
+        public static final int action_settings=0x7f08001d;
+        public static final int ass1=0x7f080005;
+        public static final int ass2=0x7f080008;
+        public static final int ass3=0x7f08000b;
+        public static final int clear=0x7f080017;
+        public static final int compute=0x7f080016;
+        public static final int exit=0x7f08001c;
+        public static final int finalScoreRep=0x7f08001a;
+        public static final int studentName=0x7f080002;
+        public static final int summRep=0x7f080019;
         public static final int tableRow1=0x7f080000;
+        public static final int tableRow2=0x7f08001b;
+        public static final int test1=0x7f08000e;
+        public static final int test2=0x7f080011;
+        public static final int test3=0x7f080014;
         public static final int textView1=0x7f080001;
     }
     public static final class layout {
@@ -50,7 +67,15 @@ public final class R {
         public static final int asg1=0x7f050003;
         public static final int asg2=0x7f050004;
         public static final int asg3=0x7f050005;
+        public static final int clear=0x7f05000a;
+        public static final int compute=0x7f050009;
+        public static final int exit=0x7f05000c;
+        public static final int finalrep=0x7f05000b;
         public static final int name=0x7f050002;
+        public static final int summ=0x7f05000d;
+        public static final int t1=0x7f050006;
+        public static final int t2=0x7f050007;
+        public static final int t3=0x7f050008;
     }
     public static final class style {
         /** 
