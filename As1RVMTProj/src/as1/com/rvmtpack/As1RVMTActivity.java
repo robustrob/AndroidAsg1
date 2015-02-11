@@ -61,7 +61,7 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     		break;
     		
     		case R.id.compute:
-    			name.setText("LOL sike");
+    			name.setText("LOL syke");
     		break;
     		
     		case R.id.summRep:
@@ -71,6 +71,7 @@ public class As1RVMTActivity extends Activity implements OnClickListener
         	break;
         	
     		case R.id.exit:
+    			System.exit(0);
     		break;
     		
     		
