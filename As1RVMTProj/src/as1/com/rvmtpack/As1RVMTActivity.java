@@ -19,9 +19,9 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     protected void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_as1_rvmt);
+        setContentView(R.layout.summary_report);
         
-        clear = (Button)this.findViewById(R.id.clear);
+       /* clear = (Button)this.findViewById(R.id.clear);
         clear.setOnClickListener(this);
         
         compute = (Button)this.findViewById(R.id.compute);
@@ -42,7 +42,7 @@ public class As1RVMTActivity extends Activity implements OnClickListener
         asg3 = (TextView)this.findViewById(R.id.ass3);
         t1 = (TextView)this.findViewById(R.id.test1);
         t2 = (TextView)this.findViewById(R.id.test2);
-        t3 = (TextView)this.findViewById(R.id.test3);
+        t3 = (TextView)this.findViewById(R.id.test3);*/
         
     }
     

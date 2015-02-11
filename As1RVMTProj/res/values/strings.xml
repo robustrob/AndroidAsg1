@@ -15,4 +15,8 @@
 	<string name="finalrep">Final Scores Report</string>
 	<string name="exit">Exit</string>
 	<string name="summ">Summary Report</string>
+	<string name="numStudents">Total Number of Students:</string>
+	<string name="passingscore">Number of Passing Scores:</string>
+	<string name="numberinvalid">Number of Invalid Scores:</string>
+	<string name="grpaverage">Group Average Score:</string>
 </resources>
