@@ -12,6 +12,8 @@ public class As1RVMTActivity extends Activity implements OnClickListener
 {
 	Button clear,compute,finalReport,summary,exit;
 	TextView name,asg1,asg2,asg3,t1,t2,t3;
+	
+	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) 
