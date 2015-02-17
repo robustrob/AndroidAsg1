@@ -33,7 +33,6 @@ public class As1RVMTSummaryReport extends Activity implements OnClickListener
 		 Group g = (Group) getIntent().getSerializableExtra("Group");
 		 
 		 numStuds.setText(g.size);
-		 
 		 grpavg.setText(Double.toString(g.average));
 		 
 		 
