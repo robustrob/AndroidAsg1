@@ -17,9 +17,10 @@ import android.view.View.OnClickListener;
 public class As1RVMTActivity extends Activity implements OnClickListener
 {
 	Button clear,compute,finalReport,summary,exit;
-	TextView name,asg1,asg2,asg3,t1,t2,t3;
+	TextView name;//,asg1,asg2,asg3,t1,t2,t3;
 	TextView[] marks;
-	final String blank = "";
+	final String BLANK = "";
+	final int ZERO = 0;
 	
 	Group students;
 	
@@ -50,12 +51,14 @@ public class As1RVMTActivity extends Activity implements OnClickListener
         
         name = (TextView)this.findViewById(R.id.studentName);
         
-        asg1 = (TextView)this.findViewById(R.id.ass1);
-        asg2 = (TextView)this.findViewById(R.id.ass2);
-        asg3 = (TextView)this.findViewById(R.id.ass3);
-        t1 = (TextView)this.findViewById(R.id.test1);
-        t2 = (TextView)this.findViewById(R.id.test2);
-        t3 = (TextView)this.findViewById(R.id.test3);
+        marks = new TextView[6];
+        
+        marks[0] = (TextView)this.findViewById(R.id.ass1);
+        marks[1] = (TextView)this.findViewById(R.id.ass2);
+        marks[2] = (TextView)this.findViewById(R.id.ass3);
+        marks[3] = (TextView)this.findViewById(R.id.test1);
+        marks[4] = (TextView)this.findViewById(R.id.test2);
+        marks[5] = (TextView)this.findViewById(R.id.test3);
         
         students = new Group();
         clearAll();
@@ -75,24 +78,27 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     			boolean validGrade = true;
     			boolean isEmpty = false;
     			int count = 0;
+    			Student newStudent = new Student();
     			
-    			if(	asg1.getText().toString().matches("") ||
-    				asg2.getText().toString().matches("") ||
-    				asg3.getText().toString().matches("") ||
-    				t1.getText().toString().matches("") ||
-    				t2.getText().toString().matches("") ||
-    				t3.getText().toString().matches("") ||
-    				name.getText().toString().matches(""))
+    			if(name.getText().toString().equals(BLANK))
     				isEmpty = true;
+    			else
+    			{
+    				while(!isEmpty && count < marks.length)
+    				{
+    					isEmpty = marks[count].getText().toString().equals(BLANK);
+    					count ++;
+    				}
+    			}
     			
-    			Student newStudent = new Student(name.getText().toString());
     			
-    			while(!isEmpty && validGrade && count < 6)
+    			count = ZERO;
+    			while(!isEmpty && validGrade && count < marks.length)
     			{
     				if(count<3)
-    					validGrade = newStudent.addGrade(Integer.parseInt(asg1.getText().toString()), count, "asg");
+    					validGrade = newStudent.addGrade(Integer.parseInt(marks[count].getText().toString()), count, "asg");
     				else
-    					validGrade = newStudent.addGrade(Integer.parseInt(asg1.getText().toString()), count-3, "test");
+    					validGrade = newStudent.addGrade(Integer.parseInt(marks[count].getText().toString()), count-3, "test");
     				
     				count++;
     			}
@@ -100,17 +106,16 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     			if(isEmpty)
     			{
     				failedAttempts++;
-    				clearAll();
     				errorMessage("Empty fields","Please enter a value in all the fields.");
     			}
-    			if(!validGrade)
+    			else if(!validGrade)
     			{
     				failedAttempts++;
-    				clearAll();
     				errorMessage("Invalid Entry","Please enter a grade between 0 and 100");
     			}
     			else
     			{
+    				newStudent.name = name.getText().toString();
     				newStudent.computeAvg();
     				newStudent.gradeToLetter();
     				students.add(newStudent);
@@ -123,7 +128,9 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     				errorMessage("Invalid Operation","Cannot get final score report; no grades have been submitted.");
     			else
     			{
-    				//stuff
+    				Intent i = new Intent("as1.com.rvmtpack.AS1RVMTSUMMARYREPORT");
+    				i.putExtra("Group", (Serializable) students);
+    				startActivity(i);
     			}
     		break;
     		
@@ -149,13 +156,9 @@ public class As1RVMTActivity extends Activity implements OnClickListener
     
     public void clearAll()
     {
-    	name.setText(blank);
-		asg1.setText(blank);
-		asg2.setText(blank);
-		asg3.setText(blank);
-		t1.setText(blank);
-		t2.setText(blank);
-		t3.setText(blank);
+    	name.setText(BLANK);
+		for(int i =0; i < marks.length; i ++)
+			marks[i].setText(BLANK);
     }
     
     public void errorMessage(String title, String message)
@@ -165,11 +168,13 @@ public class As1RVMTActivity extends Activity implements OnClickListener
 		    .setMessage(message)
 		    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
 		        public void onClick(DialogInterface dialog, int which) { 
-		            // do nothing
+		        	clearAll();
 		        }
 		     })
 		    .setIcon(android.R.drawable.ic_dialog_alert)
 		     .show();
+    		
+
 		
     	
     }

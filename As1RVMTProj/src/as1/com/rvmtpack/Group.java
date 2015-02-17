@@ -1,8 +1,9 @@
 package as1.com.rvmtpack;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Group 
+public class Group implements Serializable 
 {
 	protected ArrayList<Student> listOfStudents,topStudents;
 	protected double average;

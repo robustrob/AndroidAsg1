@@ -30,6 +30,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".As1RVMTSummaryReport"
+            android:label="@string/summ" >
+            <intent-filter>
+                <action android:name="as1.com.rvmtpack.AS1RVMTSUMMARYREPORT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -37,11 +37,12 @@ public final class R {
         public static final int TextView03=0x7f08002a;
         public static final int TextView04=0x7f08000d;
         public static final int TextView05=0x7f08002d;
+        public static final int TextView08=0x7f080030;
         public static final int TextView10=0x7f08001d;
         public static final int TextView12=0x7f080023;
         public static final int TextView14=0x7f080021;
         public static final int TextView16=0x7f08001f;
-        public static final int action_settings=0x7f080030;
+        public static final int action_settings=0x7f080033;
         public static final int ass1=0x7f080005;
         public static final int ass2=0x7f080008;
         public static final int ass3=0x7f08000b;
@@ -54,6 +55,8 @@ public final class R {
         public static final int report_asg3=0x7f080013;
         public static final int report_beststud1=0x7f08002e;
         public static final int report_beststud2=0x7f08002f;
+        public static final int report_beststud3=0x7f080031;
+        public static final int report_beststud4=0x7f080032;
         public static final int report_grpavg=0x7f080025;
         public static final int report_invalid=0x7f08002b;
         public static final int report_name=0x7f08001e;

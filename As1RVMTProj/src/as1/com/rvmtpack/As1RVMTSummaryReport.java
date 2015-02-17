@@ -30,10 +30,10 @@ public class As1RVMTSummaryReport extends Activity implements OnClickListener
 		 best1 = (TextView)this.findViewById(R.id.report_beststud1);
 		 best2 = (TextView)this.findViewById(R.id.report_beststud2);
 		 
-		 Group g = (Group) getIntent().getSerializableExtra("Group");
+		 Group group = (Group) getIntent().getSerializableExtra("Group");
 		 
-		 numStuds.setText(g.size);
-		 grpavg.setText(Double.toString(g.average));
+		 numStuds.setText(group.size);
+		 grpavg.setText(Double.toString(group.average));
 		 
 		 
 	}
