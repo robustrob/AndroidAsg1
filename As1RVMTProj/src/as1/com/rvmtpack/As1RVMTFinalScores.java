@@ -1,7 +1,6 @@
 package as1.com.rvmtpack;
 
 import java.io.Serializable;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View.OnClickListener;
